@@ -3,45 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asset Links Example</title>
+    <title>Your Website Title</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Optional: Link to a CSS file -->
 </head>
 <body>
     <header>
         <h1>Welcome to My Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="/.well-known/assetlinks.json">Asset Links JSON</a></li>
+            </ul>
+        </nav>
     </header>
+    
     <main>
         <section>
             <h2>About</h2>
-            <p>This page contains embedded JSON data for asset links.</p>
+            <p>This is a simple website that demonstrates the use of an index.html file.</p>
+        </section>
+        <section>
+            <h2>Features</h2>
+            <ul>
+                <li>Feature 1</li>
+                <li>Feature 2</li>
+                <li>Feature 3</li>
+            </ul>
         </section>
     </main>
+
     <footer>
         <p>&copy; 2024 Your Name or Your Company</p>
     </footer>
-
-    <!-- Embedding your JSON data -->
-    <script id="asset-links" type="application/json">
-    [
-      {
-        "relation": [
-          "delegate_permission/common.handle_all_urls"
-        ],
-        "target": {
-          "namespace": "android_app",
-          "package_name": "pixheroapp.com",
-          "sha256_cert_fingerprints": [
-            "91:16:E3:5A:CD:F9:33:27:8E:FD:FE:94:BD:A8:64:62:26:E6:E2:AD:B9:13:B7:51:74:2B:7F:39:44:20:A4:90"
-          ]
-        }
-      }
-    ]
-    </script>
-
-    <script>
-        // Accessing the JSON data in JavaScript
-        const assetLinksData = JSON.parse(document.getElementById('asset-links').textContent);
-        console.log(assetLinksData);
-        // You can now use assetLinksData in your JavaScript code
-    </script>
 </body>
 </html>
